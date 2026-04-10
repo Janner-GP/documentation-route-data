@@ -31,7 +31,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Este es el mejor comentario del mundo. Att: Jenn lo',
+    title: 'Prueba de comentario 2- By Jenn',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
