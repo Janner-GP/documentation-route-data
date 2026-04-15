@@ -1,0 +1,9 @@
+{
+  "label": "SQL",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Ruta SQL",
+    "description": "Fundamentos, consultas, optimizacion y casos de uso reales para trabajar con SQL."
+  }
+}
