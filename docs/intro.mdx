@@ -1,47 +1,198 @@
 ---
 sidebar_position: 1
 ---
+# CoderDocs
 
-# Tutorial Intro
+> **La fuente única de verdad** del ecosistema técnico — documentación centralizada para desarrollo, ingeniería de datos, DevOps y arquitectura de software.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+---
 
-## Getting Started
+## ¿Qué es CoderDocs?
 
-Get started by **creating a new site**.
+CoderDocs es una plataforma de documentación técnica diseñada para centralizar el conocimiento de ingeniería, estandarizar procesos y escalar buenas prácticas en equipos de tecnología.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+**Dominos cubiertos:**
 
-### What you'll need
+| Dominio | Contenido |
+|---|---|
+| **Backend** | APIs REST/GraphQL, microservicios, autenticación, patrones de diseño |
+| **Frontend** | Angular, arquitectura de componentes, guías de UI/UX |
+| **Data** | Pipelines ETL, BI, modelos ML, orquestación |
+| **DevOps** | Infraestructura como código, CI/CD, observabilidad |
+| **Architecture** | Decisiones de diseño, ADRs, diagramas de sistema |
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+---
 
-## Generate a new site
+## Requisitos
 
-Generate a new Docusaurus site using the **classic template**.
+- Node.js `>= 20`
+- npm o yarn
+- Git
 
-The classic template will automatically be added to your project after you run the command:
+---
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+## Instalación y ejecución
 
 ```bash
-cd my-website
+# Instalar dependencias
+npm install
+
+# Iniciar en local
 npm run start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+---
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## Estructura del proyecto
+
+Toda la documentación vive dentro de la carpeta `/docs`, organizada por dominio:
+
+```
+docs/
+├── backend/
+├── frontend/
+├── data/
+├── devops/
+└── architecture/
+```
+
+### Reglas de contenido
+
+- Los archivos deben estar en formato `.md`
+- Usa `sidebar_position` en el frontmatter para controlar el orden en el menú
+- Nombra los archivos en inglés, en minúsculas y con guiones (`kebab-case`)
+- Sigue la jerarquía de carpetas por dominio
+- Explica el **por qué**, no solo el **qué**
+- Usa diagramas cuando aporten claridad
+- No dupliques contenido — enlaza en su lugar
+
+### Crear una nueva página
+
+```markdown
+---
+sidebar_position: 2
+---
+
+# Título del documento
+
+Contenido aquí...
+```
+
+---
+
+## Flujo de contribución
+
+> ⚠️ **No se permite hacer push directo a `main`.** Todo cambio debe pasar por Pull Request.
+
+### Paso a paso
+
+**1. Fork del repositorio**
+
+Haz un fork hacia tu cuenta personal desde GitHub.
+
+**2. Crear una rama**
+
+```bash
+git checkout -b feature/nombre-del-cambio
+```
+
+**3. Realizar los cambios**
+
+Agrega o modifica documentación siguiendo los estándares de este README.
+
+**4. Commitear los cambios**
+
+```bash
+git commit -m "feat: add documentation for authentication module"
+```
+
+**5. Push a tu fork**
+
+```bash
+git push origin feature/nombre-del-cambio
+```
+
+**6. Abrir un Pull Request**
+
+- Abre un PR hacia `main` del repositorio principal
+- Describe claramente: qué agregaste/modificaste y por qué es necesario
+
+**7. Revisión y merge**
+
+El PR será revisado por un maintainer. Puede requerir ajustes antes de ser aprobado y mergeado.
+
+---
+
+## Convenciones
+
+### Ramas
+
+Usa prefijos estándar según el tipo de cambio:
+
+| Prefijo | Uso |
+|---|---|
+| `feature/` | Nueva documentación o funcionalidad |
+| `fix/` | Corrección de errores o información incorrecta |
+| `docs/` | Actualizaciones menores de documentación existente |
+| `refactor/` | Reorganización de estructura sin cambios de contenido |
+| `chore/` | Tareas de mantenimiento general |
+
+**Ejemplos:**
+
+```
+feature/add-user-module-docs
+fix/api-auth-error-description
+docs/update-onboarding-guide
+```
+
+### Commits
+
+Seguimos [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+**Formato:**
+
+```
+<tipo>: <descripción en imperativo, minúsculas>
+```
+
+**Tipos válidos:**
+
+| Tipo | Cuándo usarlo |
+|---|---|
+| `feat` | Nueva documentación o sección |
+| `fix` | Corrección de contenido incorrecto |
+| `docs` | Ajuste menor en documentación existente |
+| `refactor` | Reorganización sin cambio de contenido |
+| `chore` | Actualizaciones de config, dependencias, etc. |
+
+**Ejemplos:**
+
+```bash
+feat: add ETL pipeline documentation
+fix: correct typo in API authentication docs
+docs: update onboarding guide for new engineers
+refactor: restructure backend section by subdomain
+```
+
+---
+
+## Buenas prácticas
+
+- ✅ Documenta con ejemplos reales y contexto de uso
+- ✅ Explica decisiones de diseño y sus motivaciones
+- ✅ Usa diagramas (Mermaid, draw.io) cuando aporten claridad
+- ✅ Mantén consistencia en naming y estructura
+- ✅ Enlaza documentos relacionados en lugar de repetir contenido
+- ❌ No documentes lo obvio — añade valor o no añadas nada
+
+---
+
+## Filosofía
+
+CoderDocs no es solo un repositorio de documentación.
+
+Es la **fuente única de verdad** de todo el ecosistema técnico: el lugar al que cualquier persona del equipo puede acudir para entender cómo funciona el sistema, por qué se tomaron ciertas decisiones y cómo contribuir correctamente.
+
+**Documentar bien es un acto de respeto hacia el equipo futuro — incluido tu yo del futuro.**

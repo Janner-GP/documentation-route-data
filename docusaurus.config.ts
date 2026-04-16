@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'CoderDocs',
-  tagline: 'Documentación técnica y rutas de aprendizaje',
-  favicon: 'img/favicon.ico',
+  tagline: 'La Wiki de los DEV',
+  favicon: 'img/icono.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://geissler01.github.io',
+  url: 'https://coderdocs.emausoft.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/documentation-route-data/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'geissler01', // Usually your GitHub org/user name.
-  projectName: 'documentation-route-data', // Usually your repo name.
+  organizationName: 'coderdocs', // Usually your GitHub org/user name.
+  projectName: 'Coderdocs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -31,8 +31,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['en', 'es'],
   },
 
   presets: [
@@ -75,31 +75,25 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'CoderDocs',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Coderdocs Logo',
+        src: 'img/png/icono.png',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'homeSidebar',
           position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/geissler01/documentation-route-data',
-          label: 'GitHub',
-          position: 'right',
+          label: 'Inicio',
         },
       ],
-    },
-    footer: {
+    }
+    /*footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'CoderDocs',
           items: [
             {
               label: 'Tutorial',
@@ -107,39 +101,9 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} CoderDocs Inc.`,
+    }*/,
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
