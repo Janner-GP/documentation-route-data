@@ -1,4 +1,31 @@
-# Conectividad y Redes
+---
+sidebar_position: 2
+---
+
+import VpcEntrada from '@site/static/img/vpc/1.png';
+import VpcCreate from '@site/static/img/vpc/VPC_1.png';
+import VpcConf1 from '@site/static/img/vpc/VPC_2.png';
+import VpcConf2 from '@site/static/img/vpc/VPC_3.png';
+import SubredCreate from '@site/static/img/vpc/SUBRED_1.png';
+import SubredVpc from '@site/static/img/vpc/SUBRED_2.png';
+import SubredPub from '@site/static/img/vpc/SUBRED_3.png';
+import SubredPriv from '@site/static/img/vpc/SUBRED_4.png';
+import InternetCreate from '@site/static/img/vpc/INTERNET_1.png';
+import InternetName from '@site/static/img/vpc/INTERNET_2.png';
+import InternetAttach from '@site/static/img/vpc/INTERNET_3.png';
+import InternetVpc from '@site/static/img/vpc/INTERNET_4.png';
+import RouteCreate from '@site/static/img/vpc/ROUTE_1.png';
+import RouteName from '@site/static/img/vpc/ROUTE_2.png';
+import RouteEdit from '@site/static/img/vpc/ROUTE_3.png';
+import RouteAdd from '@site/static/img/vpc/ROUTE_4.png';
+import RouteTarget from '@site/static/img/vpc/ROUTE_5.png';
+import RouteAssoc from '@site/static/img/vpc/ROUTE_6.png';
+import RouteFinal from '@site/static/img/vpc/ROUTE_7.png';
+import SecurityCreate from '@site/static/img/vpc/SECURITY_1.png';
+import SecurityMaster from '@site/static/img/vpc/SECURITY_2.png';
+import SecurityWorker from '@site/static/img/vpc/SECURITY_3.png';
+
+# Configuración de Red: VPC y Seguridad
 ## VPC (Virtual Private Cloud)
 
 Una VPC (Virtual Private Cloud) es una red virtual privada dentro de la nube que permite desplegar recursos como servidores o bases de datos de forma aislada y segura. Esto significa que es un entorno de red separado de otras redes, donde los recursos no son accesibles directamente desde el exterior, a menos que se configure explícitamente el acceso.
@@ -15,9 +42,9 @@ Permite direcciones desde /16 hasta /28.
 
 Las subredes (subnets) son divisiones lógicas dentro de una VPC en AWS, que permiten organizar y segmentar los recursos según su función y nivel de acceso. Estas pueden ser públicas o privadas:
 
-* **Subred Pública:** Es una subred que tiene acceso directo a internet a través de un Internet Gateway, lo que permite que los recursos dentro de ella puedan comunicarse con el exterior. Se utiliza para balanceadores de carga y servidores web
+* *Subred Pública:* Es una subred que tiene acceso directo a internet a través de un Internet Gateway, lo que permite que los recursos dentro de ella puedan comunicarse con el exterior. Se utiliza para balanceadores de carga y servidores web
 
-* **Subred Privada:** Es una subred que no tiene acceso directo a internet, utilizada para recursos internos que requieren mayor seguridad y no deben ser expuestos públicamente. Se utiliza para bases de datos y capas de aplicación que requieren aislamiento
+* *Subred Privada:* Es una subred que no tiene acceso directo a internet, utilizada para recursos internos que requieren mayor seguridad y no deben ser expuestos públicamente. Se utiliza para bases de datos y capas de aplicación que requieren aislamiento
 
 ### 3. Internet Gateway
 
@@ -45,106 +72,102 @@ VPC
  ├── Internet Gateway
  ├── Route Tables
  └── Security Groups / ACLs
- ``` 
+```
 
 ### 1. Crear la VPC
 
 La creación de la VPC es el primer paso, donde se define la red virtual privada en la nube. En este proceso se establece el rango de direcciones IP y el entorno donde se van a desplegar y organizar los demás recursos como subredes, servidores y bases de datos.
 
 * **Buscar VPC en la consola de AWS**
+<img src={VpcEntrada} alt="VPC Entrance" />
 
-![VPC Entrance](pathname:///img/vpc/1.png)
 
 * **Seleccionar → Create VPC**
+<img src={VpcCreate} alt="Create VPC" />
 
-![VPC_Entrance](pathname:///img/vpc/VPC_1.png)
 
 * **Configurar el Nombre de la VPC y un IPv4 CIDR (Ej: 10.0.0.0/16)**
+<img src={VpcConf1} alt="Configuración VPC" />
 
-![VPC_Entrance](pathname:///img/vpc/VPC_2.png)
-![VPC_Entrance](pathname:///img/vpc/VPC_3.png)
+<img src={VpcConf2} alt="Detalle CIDR" />
+
 
 ### 2. Crear las Subredes
 
 Se realiza la creación de subredes y su configuración según el tipo de acceso.
 
 * **En el menú lateral seleccionar → Subnets, Seleccionar → Create Subnet**
+<img src={SubredCreate} alt="Crear Subred" />
 
-![VPC_Entrance](pathname:///img/vpc/SUBRED_1.png)
 
-*  **Asociarla a la VPC Creada**
+* **Asociarla a la VPC Creada**
+<img src={SubredVpc} alt="Asociar VPC" />
 
-![VPC_Entrance](pathname:///img/vpc/SUBRED_2.png)
 
 **2.1 Configuración de Subred Pública**
 
 Configura el nombre de la Subred Pública y el IPv4 Subnet CIDR (Ej: 10.0.1.0/24)
+<img src={SubredPub} alt="Subred Pública" />
 
-![VPC_Entrance](pathname:///img/vpc/SUBRED_3.png)
 
-**2.1 Configuración de Subred Privada**
+**2.2 Configuración de Subred Privada**
 
 Configura el nombre de la Subred Privada y el IPv4 Subnet CIDR (Ej: 10.0.2.0/24)
+<img src={SubredPriv} alt="Subred Privada" />
 
-![VPC_Entrance](pathname:///img/vpc/SUBRED_4.png)
 
-### 3. Configurar Internet Gateway
+### 3. Configurar Internet Gateway (IGW)
 
 Se realiza la conexión con Internet
 
 * **En el menú lateral seleccionar → Internet Gateways, Seleccionar → Create Internet Gateway**
+<img src={InternetCreate} alt="Crear IGW" />
+<img src={InternetName} alt="Nombre IGW" />
 
-![VPC_Entrance](pathname:///img/vpc/INTERNET_1.png)
-
-* **Asignar el Nombre y Crear**
-
-![VPC_Entrance](pathname:///img/vpc/INTERNET_2.png)
 
 * **Seleccionar en el menú actions → Attach to VPC**
+<img src={InternetAttach} alt="Acción Attach" />
 
-![VPC_Entrance](pathname:///img/vpc/INTERNET_3.png)
 
 * **Attachment a la VPC creada**
+<img src={InternetVpc} alt="Vincular a VPC" />
 
-![VPC_Entrance](pathname:///img/vpc/INTERNET_4.png)
-
-### 4. Cofigurar Route Table
+### 4. Configurar Route Table
 
 Transformamos una subred común en una subred pública.
 
 * **En el menú lateral seleccionar →  Route Tables, seleccionar → Create Route Table**
+<img src={RouteCreate} alt="Crear Route Table" />
 
-![VPC_Entrance](pathname:///img/vpc/ROUTE_1.png)
 
 * **Configurar el Nombre de la ruta**
+<img src={RouteName} alt="Nombre Ruta" />
 
-![VPC_Entrance](pathname:///img/vpc/ROUTE_2.png)
 
 * **Seleccionar → Edit Route**
+<img src={RouteEdit} alt="Editar" />
 
-![VPC_Entrance](pathname:///img/vpc/ROUTE_3.png)
 
 * **Seleccionar → Add Route**
+<img src={RouteAdd} alt="Añadir" />
 
-![VPC_Entrance](pathname:///img/vpc/ROUTE_4.png)
 
-* **Añadir la ruta Destination: 0.0.0.0/0  y Conectarla con el Internet Gateway Creado previamente**
+* **Conectar con el Internet Gateway creado previamente Destination: (0.0.0.0/0)**
+<img src={RouteTarget} alt="Destino IGW" />
 
-![VPC_Entrance](pathname:///img/vpc/ROUTE_5.png)
 
 * **Asociación a la subnet publica: seleccionar actions → Edit Subnet associations**
+<img src={RouteAssoc} alt="Asociación Subred" />
 
-![VPC_Entrance](pathname:///img/vpc/ROUTE_6.png)
 
 * **Attachment a la subnet pública**
+<img src={RouteFinal} alt="Finalizar Asociación" />
 
-![VPC_Entrance](pathname:///img/vpc/ROUTE_7.png)
 
 ### Configurar Grupos de Seguridad (Security Groups)
 
 * **En el menú lateral seleccionar → Security Groups, seleccionar → Create Security Group**
-
-![VPC_Entrance](pathname:///img/vpc/SECURITY_1.png)
+<img src={SecurityCreate} alt="Crear SG" />
 
 * **Configuración Nodo Master**
 
@@ -155,9 +178,9 @@ Inbound Rules (Reglas de entrada):
 - Puerto: 22
 - Origin (Source): 0.0.0.0/0
 
-![VPC_Entrance](pathname:///img/vpc/SECURITY_2.png)
+<img src={SecurityMaster} alt="Reglas Master" />
 
-* **Configuración Nodo Worker**
+* **Configuración Nodo Worker (Acceso desde SG-Master)**
 
 Inbound Rules (Reglas de entrada):
 
@@ -166,7 +189,9 @@ Inbound Rules (Reglas de entrada):
 - Puerto: 22
 - Origin (Source): SG-Master
 
-![VPC_Entrance](pathname:///img/vpc/SECURITY_3.png)
+<img src={SecurityWorker} alt="Reglas Worker" />
+
+---
 
 ### ACLs de Red
 
