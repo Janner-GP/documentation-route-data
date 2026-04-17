@@ -1,0 +1,114 @@
+# 🌐 Guía de Cómputo en la Nube: Amazon EC2 y Almacenamiento
+
+Esta sección de la enciclopedia cubre los fundamentos de **Amazon EC2 (Elastic Compute Cloud)**, el servicio que proporciona capacidad de cómputo segura y ajustable en la nube.
+
+---
+
+## 1. Amazon EC2: El Motor de Cómputo
+
+### 📋 ¿Qué es una Instancia?
+Una instancia es, esencialmente, un servidor virtual en la nube de AWS. Al lanzarla, defines los recursos de CPU, memoria, almacenamiento y red.
+
+### 🧬 Familias y Tipos de Instancias
+AWS clasifica las instancias en **Familias** según su optimización:
+
+| Familia | Prefijo | Caso de Uso Ideal |
+| :--- | :--- | :--- |
+| **Propósito General** | `t`, `m` | Equilibrio entre cómputo, memoria y red (Web servers, DB pequeñas). |
+| **Optimizado para Cómputo** | `c` | Cargas de trabajo intensas en CPU (Procesamiento de video, Machine Learning). |
+| **Optimizado para Memoria** | `r`, `x`, `z` | Procesamiento de grandes conjuntos de datos (Bases de datos en memoria). |
+| **Computación Acelerada** | `p`, `g`, `f` | Uso de GPUs para diseño gráfico o cálculos científicos. |
+| **Optimizado para Almacenamiento** | `i`, `d`, `h` | Alta velocidad de lectura/escritura en disco (Data warehousing). |
+
+> **Nota:** El nombre de la instancia (ej. `t2.micro`) indica: Familia (`t`), Generación (`2`) y Tamaño (`micro`).
+
+### 💿 AMIs (Amazon Machine Images)
+La AMI es la **plantilla** que contiene la configuración del software (sistema operativo, servidor de aplicaciones y aplicaciones).
+* **Quick Start:** AMIs populares (Amazon Linux, Ubuntu, Windows).
+* **My AMIs:** Plantillas creadas por el usuario a partir de sus propias instancias.
+* **AWS Marketplace:** Software preconfigurado por terceros.
+
+---
+
+## 2. Almacenamiento y Acceso Seguro
+
+### 💾 Volúmenes EBS (Elastic Block Store)
+EBS es el "disco duro" de tu instancia EC2.
+* **Persistencia:** A diferencia del almacenamiento temporal, los datos en EBS sobreviven si la instancia se detiene.
+* **Snapshots:** Puedes tomar "fotos" de tus volúmenes para respaldar información o crear nuevos volúmenes.
+
+
+
+### 🔑 Acceso vía SSH: Pares de Llaves
+AWS no utiliza contraseñas tradicionales para Linux. Utiliza **Criptografía de Llave Pública**.
+
+* **Llave Pública:** AWS la guarda en la instancia.
+* **Llave Privada:** Tú la descargas en tu PC. Es el archivo que te da acceso.
+
+#### Formatos de Archivo:
+* **.pem (Privacy Enhanced Mail):** Formato estándar para OpenSSH. Se usa en Linux, macOS y terminales modernas de Windows.
+* **.ppk (PuTTY Private Key):** Formato específico para el software **PuTTY** (común en versiones antiguas de Windows).
+
+---
+
+---
+sidebar_position: 1
+---
+
+# 🌐 Guía de Cómputo en la Nube: Amazon EC2 y Almacenamiento
+
+import LanzarInstancia from '@site/static/img/AWS/01-LanzarInstancia.png';
+import NombreInstancia from '@site/static/img/AWS/02-Nombre_de_la_Instancia.png';
+import SeleccionarSO from '@site/static/img/AWS/03-SeleccionarSistemaOperativo.png';
+import TipoInstancia from '@site/static/img/AWS/04-Seleccionar_el_tipo_de_instancia.png';
+import ParesClaves from '@site/static/img/AWS/05-Seleccionar_los_pares_claves.png';
+import ConfigRed from '@site/static/img/AWS/06-Seleccionar_la_configuracion_de_red.png';
+import Almacenamiento from '@site/static/img/AWS/07-Seleccionar_la_capacidad_de_almacenamiento.png';
+import Finalizar from '@site/static/img/AWS/08-Lanzar_Instancia_final.png';
+
+Esta sección de la enciclopedia cubre los fundamentos de **Amazon EC2 (Elastic Compute Cloud)**...
+
+---
+
+## 🛠️ Paso a Paso: Lanzamiento y Conexión
+
+### Paso 1: Configuración de la Instancia
+1. Entra a la consola de AWS -> **EC2**.
+2. Haz clic en **Launch Instance**.
+<img src={LanzarInstancia} alt="Lanzar instancia" style={{border: '1px solid #eee'}} />
+
+3. Escribir el nombre de la Instancia (Ej: "SRV-WORKER-DATA").
+<img src={NombreInstancia} alt="Nombre de la instancia" />
+
+4. Seleccionamos el tipo de sistema operativo o AMI.
+<img src={SeleccionarSO} alt="AMI" />
+
+5. Elige un **Instance Type** (ej. `t2.micro`).
+<img src={TipoInstancia} alt="Tipo Instancia" />
+
+6. Seleccionar los pares clave.
+<img src={ParesClaves} alt="Pares Clave" />
+
+7. Configurar la red y seleccionar el grupo de seguridad. 
+<img src={ConfigRed} alt="Grupos de seguridad" />
+
+8. Configurar el almacenamiento (EBS).
+<img src={Almacenamiento} alt="Almacenamiento" />
+
+9. Finalmente, clic en **Lanzar Instancia**.
+<img src={Finalizar} alt="Lanzar Instancia final" />
+
+
+### Paso 2: Seguridad y Llaves
+1. En la sección **Key Pair**, selecciona "Create new key pair".
+![nombre pares clave](pathname:///img/AWS/09-Crear_pares_clave.png)
+2. Asígnale un nombre y elige el formato según tu herramienta (.pem o .ppk).
+![formato](pathname:///img/AWS/10-Nombre_Claves.png)
+3. **¡IMPORTANTE!** Descarga el archivo y guárdalo en un lugar seguro; AWS no permite descargarlo de nuevo.
+
+### Paso 3: Conexión vía SSH (Linux/Mac/PowerShell)
+1. Abre tu terminal y navega hasta donde está tu llave.
+2. Cambia los permisos de la llave (solo en Linux/Mac): `chmod 400 mi-llave.pem`.
+3. Ejecuta el comando de conexión:
+   ```bash
+   ssh -i "mi-llave.pem" ec2-user@IP-PUBLICA-DE-TU-INSTANCIA
