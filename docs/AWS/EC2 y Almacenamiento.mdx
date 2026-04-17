@@ -51,33 +51,53 @@ AWS no utiliza contraseñas tradicionales para Linux. Utiliza **Criptografía de
 
 ---
 
+---
+sidebar_position: 1
+---
+
+# 🌐 Guía de Cómputo en la Nube: Amazon EC2 y Almacenamiento
+
+import LanzarInstancia from '@site/static/img/AWS/01-LanzarInstancia.png';
+import NombreInstancia from '@site/static/img/AWS/02-Nombre_de_la_Instancia.png';
+import SeleccionarSO from '@site/static/img/AWS/03-SeleccionarSistemaOperativo.png';
+import TipoInstancia from '@site/static/img/AWS/04-Seleccionar_el_tipo_de_instancia.png';
+import ParesClaves from '@site/static/img/AWS/05-Seleccionar_los_pares_claves.png';
+import ConfigRed from '@site/static/img/AWS/06-Seleccionar_la_configuracion_de_red.png';
+import Almacenamiento from '@site/static/img/AWS/07-Seleccionar_la_capacidad_de_almacenamiento.png';
+import Finalizar from '@site/static/img/AWS/08-Lanzar_Instancia_final.png';
+
+Esta sección de la enciclopedia cubre los fundamentos de **Amazon EC2 (Elastic Compute Cloud)**...
+
+---
+
 ## 🛠️ Paso a Paso: Lanzamiento y Conexión
 
 ### Paso 1: Configuración de la Instancia
 1. Entra a la consola de AWS -> **EC2**.
 2. Haz clic en **Launch Instance**.
-![Lanzar instancia](pathname:///img/AWS/01-LanzarInstancia.png)
+<img src={LanzarInstancia} alt="Lanzar instancia" style={{border: '1px solid #eee'}} />
 
 3. Escribir el nombre de la Instancia (Ej: "SRV-WORKER-DATA").
-![Nombre de la instancia](pathname:///img/AWS/02-Nombre_de_la_Instancia.png)
+<img src={NombreInstancia} alt="Nombre de la instancia" />
 
-4. Seleccionamos el sistema operativo (AMI). En este caso, Ubuntu.
-![AMI](pathname:///img/AWS/03-SeleccionarSistemaOperativo.png)
+4. Seleccionamos el tipo de sistema operativo o AMI.
+<img src={SeleccionarSO} alt="AMI" />
 
 5. Elige un **Instance Type** (ej. `t2.micro`).
-![Tipo Instancia](pathname:///img/AWS/04-Seleccionar_el_tipo_de_instancia.png)
+<img src={TipoInstancia} alt="Tipo Instancia" />
 
-6. Seleccionar los pares de claves (Key Pair).
-![Pares Clave](pathname:///img/AWS/05-Seleccionar_los_pares_claves.png)
+6. Seleccionar los pares clave.
+<img src={ParesClaves} alt="Pares Clave" />
 
-7. Configurar la red y los grupos de seguridad.
-![Grupos de seguridad](pathname:///img/AWS/06-Seleccionar_la_configuración_de_red.png)
+7. Configurar la red y seleccionar el grupo de seguridad. 
+<img src={ConfigRed} alt="Grupos de seguridad" />
 
-8. Configurar el almacenamiento EBS.
-![Almacenamiento](pathname:///img/AWS/07-Seleccionar_la_capacidad_de_almacenamiento.png)
+8. Configurar el almacenamiento (EBS).
+<img src={Almacenamiento} alt="Almacenamiento" />
 
 9. Finalmente, clic en **Lanzar Instancia**.
-![Lanzar Instancia Final](pathname:///img/AWS/08-Lanzar_Instancia_final.png)
+<img src={Finalizar} alt="Lanzar Instancia final" />
+
 
 ### Paso 2: Seguridad y Llaves
 1. En la sección **Key Pair**, selecciona "Create new key pair".
