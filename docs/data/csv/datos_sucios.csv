@@ -1,0 +1,51 @@
+id_dispositivo;producto;categoria;fecha_registro;precio;existencias;region
+1;Monitor 4K;Gadgets;2022-06-14;317.06;7.0;Norteamérica
+2;Mouse Gaming;Almacenamiento;2023-07-19;199.5;64.0;Norteamérica
+3;Monitor 4K;;2024-06-18;1067.25;80.0;Europa
+4;SSD 1TB;Periféricos;2023-01-13;1296.08;61.0;Norteamérica
+5;iPhone 15;Hardware;2024-03-17;1156.75;45.0;Norteamérica
+6;Monitor 4K;Redes;15/05/2023;1077.9;10.0; Latam
+7;SSD 1TB;Hardware;2024-08-22;827.1;81.0;Europa
+8;Laptop Pro X;Periféricos;2022-08-19;1551.19;44.0; Latam
+9;iPhone 15;Periféricos;2023-09-13;"$1;500.00";3.0;Europa
+10;Teclado Mecánico;Periféricos;2022-03-17;461.73;41.0;Asia 
+11;RTX 4080;Periféricos;2023-03-28;;71.0;Norteamérica
+12;iPhone 15;Redes;2024-08-20;1111.54;27.0;Norteamérica
+13;laptop pro x;Gadgets;2023-01-13;209.34;35.0;Asia 
+14;SSD 1TB;Periféricos;2024-08-18;1778.34;12.0;Norteamérica
+15;Mouse Gaming;Hardware;2023-03-27;698.2;2.0;Norteamérica
+16;iPhone 15;Hardware;2024-04-17;421.55;; Latam
+17;SSD 1TB;Redes;2022-01-18;1179.3;39.0;Norteamérica
+18;Laptop Pro X;Almacenamiento;2024-09-27;1851.52;53.0;Europa
+19;Laptop Pro X;Redes;2022-04-11;640.93;91.0; Latam
+20;iPhone 15;Gadgets;2023-05-12;423.69;61.0;Asia 
+21;Teclado Mecánico;Almacenamiento;2024.12.01;1480.52;5.0;Asia 
+22;SSD 1TB;Gadgets;2023-08-24;1993.73;43.0;Europa
+23;RTX 4080;Gadgets;2023-06-17;706.03;29.0;Asia 
+24;SSD 1TB;Almacenamiento;2023-06-28;1297.26;64.0;Europa
+25;Teclado Mecánico;Gadgets;2022-08-15;1183.48;73.0;Norteamérica
+26;Laptop Pro X;Redes;2022-08-28;"850;50";31.0; Latam
+27;Router Wi-Fi 6;Hardware;2024-06-19;1631.66;50.0; Latam
+28;Router Wi-Fi 6;Hardware;2022-06-24;192.28;15.0;Asia 
+29;Mouse Gaming;Gadgets;2024-09-21;380.8;34.0; Latam
+30;iPhone 15;Gadgets;2023-08-18;1874.5;11.0;Asia 
+31;;Almacenamiento;2023-08-20;1976.09;11.0; Latam
+32;SSD 1TB;Redes;2023-06-24;1776.3;91.0;Norteamérica
+33;Laptop Pro X;Periféricos;2023-07-21;365.5;55.0;Norteamérica
+34;iPhone 15;hardware;2022-01-22;397.43;73.0;Norteamérica
+35;RTX 4080;Hardware;2023-03-13;458.63;0.0;Europa
+36;Teclado Mecánico;Periféricos;2023-02-10;716.22;61.0;Europa
+37;SSD 1TB;Periféricos;2022-01-28;557.81;3.0;Norteamérica
+38;iPhone 15;Periféricos;2022-03-26;211.47;17.0;Asia 
+39;Router Wi-Fi 6;Gadgets;2022-04-20;1382.13;65.0; Latam
+40;Teclado Mecánico;Redes;2023-08-23;1303.63;94.0;Europa
+41;Router Wi-Fi 6;Gadgets;2022-07-26;-100.0;6.0;Asia 
+42;Laptop Pro X;Gadgets;2022-04-25;377.27;52.0; Latam
+43;Mouse Gaming;Gadgets;2024-01-25;1209.28;9999.0;Asia 
+44;Laptop Pro X;Periféricos;2022-01-17;1548.85;64.0;Europa
+45;SSD 1TB;Redes;2024-05-27;219.97;80.0;Norteamérica
+1;Monitor 4K;Gadgets;2022-06-14;317.06;7.0;Norteamérica
+2;Mouse Gaming;Almacenamiento;2023-07-19;199.5;64.0;Norteamérica
+3;Monitor 4K;Gadgets;2024-06-18;1067.25;80.0;Europa
+4;SSD 1TB;Periféricos;2023-01-13;1296.08;61.0;Norteamérica
+5;iPhone 15;Hardware;2024-03-17;1156.75;45.0;Norteamérica
