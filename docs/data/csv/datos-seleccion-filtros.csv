@@ -1,0 +1,67 @@
+id_evento,fecha,region,departamento,servicio,costo_usd,prioridad
+EV-1001,2026-04-01,Latam,DevOps,AWS EC2,450.5,Alta
+EV-1002,2026-04-01,Europa,Seguridad,Cloudflare,120.0,Media
+EV-1003,2026-04-01,USA-East,Logística,Shopify API,85.2,Baja
+EV-1004,2026-04-02,Asia-Pacific,DevOps,Kubernetes,1200.0,Crítica
+EV-1005,2026-04-02,Latam,Soporte,Google Cloud,30.0,Baja
+EV-1006,2026-04-02,USA-West,Marketing,Facebook Ads,500.0,Alta
+EV-1007,2026-04-03,Europa,DevOps,AWS S3,210.75,Media
+EV-1008,2026-04-03,Latam,Seguridad,VPN Gateway,45.0,Baja
+EV-1009,2026-04-03,USA-East,DevOps,RDS Database,670.0,Alta
+EV-1010,2026-04-04,Asia-Pacific,Soporte,Zendesk,150.0,Media
+EV-1011,2026-04-04,USA-West,DevOps,Lambda,12.5,Baja
+EV-1012,2026-04-04,Europa,Logística,Inventory API,95.0,Media
+EV-1013,2026-04-05,Latam,DevOps,AWS EC2,450.5,Alta
+EV-1014,2026-04-05,USA-East,Seguridad,Cloudflare,800.0,Crítica
+EV-1015,2026-04-05,Asia-Pacific,Marketing,Google Ads,350.0,Alta
+EV-1016,2026-04-06,Europa,Soporte,Slack Enterprise,200.0,Baja
+EV-1017,2026-04-06,Latam,DevOps,Kubernetes,1150.0,Crítica
+EV-1018,2026-04-06,USA-West,Logística,Stripe,60.0,Media
+EV-1019,2026-04-07,Asia-Pacific,DevOps,RDS Database,670.0,Alta
+EV-1020,2026-04-07,Europa,Seguridad,VPN Gateway,45.0,Baja
+EV-1021,2026-04-07,USA-East,DevOps,AWS S3,210.75,Media
+EV-1022,2026-04-08,Latam,Soporte,Google Cloud,30.0,Baja
+EV-1023,2026-04-08,USA-West,Marketing,Facebook Ads,550.0,Alta
+EV-1024,2026-04-08,Asia-Pacific,DevOps,AWS EC2,450.5,Media
+EV-1025,2026-04-09,Europa,Logística,Inventory API,110.0,Alta
+EV-1026,2026-04-09,Latam,Seguridad,Cloudflare,120.0,Media
+EV-1027,2026-04-09,USA-East,DevOps,Lambda,15.0,Baja
+EV-1028,2026-04-10,Asia-Pacific,Soporte,Zendesk,150.0,Media
+EV-1029,2026-04-10,USA-West,DevOps,Kubernetes,1300.0,Crítica
+EV-1030,2026-04-10,Europa,Marketing,Google Ads,400.0,Alta
+EV-1031,2026-04-11,Latam,Logística,Shopify API,85.2,Baja
+EV-1032,2026-04-11,USA-East,DevOps,RDS Database,700.0,Alta
+EV-1033,2026-04-11,Asia-Pacific,Seguridad,VPN Gateway,50.0,Baja
+EV-1034,2026-04-12,Europa,DevOps,AWS S3,220.0,Media
+EV-1035,2026-04-12,Latam,Soporte,Slack Enterprise,210.0,Media
+EV-1036,2026-04-12,USA-West,DevOps,AWS EC2,460.0,Alta
+EV-1037,2026-04-13,Asia-Pacific,Logística,Stripe,75.0,Baja
+EV-1038,2026-04-13,Europa,Seguridad,Cloudflare,900.0,Crítica
+EV-1039,2026-04-13,USA-East,Marketing,Facebook Ads,600.0,Alta
+EV-1040,2026-04-14,Latam,DevOps,Kubernetes,1250.0,Crítica
+EV-1041,2026-04-14,USA-West,Soporte,Google Cloud,35.0,Baja
+EV-1042,2026-04-14,Asia-Pacific,DevOps,Lambda,18.0,Baja
+EV-1043,2026-04-15,Europa,Logística,Inventory API,105.0,Media
+EV-1044,2026-04-15,Latam,DevOps,RDS Database,680.0,Alta
+EV-1045,2026-04-15,USA-East,Seguridad,VPN Gateway,48.0,Baja
+EV-1046,2026-04-01,USA-West,DevOps,AWS S3,215.0,Media
+EV-1047,2026-04-01,Asia-Pacific,Soporte,Zendesk,155.0,Media
+EV-1048,2026-04-01,Europa,Marketing,Google Ads,410.0,Alta
+EV-1049,2026-04-02,Latam,Logística,Shopify API,88.0,Baja
+EV-1050,2026-04-02,USA-East,DevOps,AWS EC2,455.0,Alta
+EV-1051,2026-04-02,USA-West,Seguridad,Cloudflare,130.0,Media
+EV-1052,2026-04-03,Asia-Pacific,DevOps,Kubernetes,1220.0,Crítica
+EV-1053,2026-04-03,Europa,Soporte,Google Cloud,32.0,Baja
+EV-1054,2026-04-03,Latam,Marketing,Facebook Ads,510.0,Alta
+EV-1055,2026-04-04,USA-East,DevOps,AWS S3,212.0,Media
+EV-1056,2026-04-04,USA-West,Seguridad,VPN Gateway,46.0,Baja
+EV-1057,2026-04-04,Asia-Pacific,DevOps,RDS Database,675.0,Alta
+EV-1058,2026-04-05,Europa,Soporte,Zendesk,152.0,Media
+EV-1059,2026-04-05,Latam,DevOps,Lambda,14.0,Baja
+EV-1060,2026-04-05,USA-East,Logística,Inventory API,98.0,Media
+EV-1061,2026-04-06,USA-West,DevOps,AWS EC2,452.0,Alta
+EV-1062,2026-04-06,Asia-Pacific,Seguridad,Cloudflare,810.0,Crítica
+EV-1063,2026-04-06,Europa,Marketing,Google Ads,360.0,Alta
+EV-1064,2026-04-07,Latam,Soporte,Slack Enterprise,205.0,Baja
+EV-1065,2026-04-07,USA-East,DevOps,Kubernetes,1160.0,Crítica
+EV-1066,2026-0

@@ -50,12 +50,13 @@ Aquí se desarrollan los temas de forma progresiva:
 - **Carga de datos**: Importación desde CSV, JSON y otros formatos.
 - **Exploración inicial**: Primeras inspecciones para entender la calidad del dato.
 - **Selección y filtrado**: Cómo extraer exactamente lo que necesitas.
-- **Limpieza de datos**: Manejo de nulos y duplicados (próximamente).
-- **Agrupaciones y Uniones**: Resúmenes estadísticos y combinación de tablas (próximamente).
+- **Limpieza de datos**: Manejo de nulos y duplicados.
+- **Transformaciones**: Modificación y estandarización de columnas.
+- **Agrupaciones y Uniones**: Resúmenes estadísticos y combinación de tablas.
 
 Cada tema incluye ejemplos prácticos y fragmentos de código listos para probar.
 
-**Proyecto de ejemplo**: Puedes encontrar el código fuente y los datasets en el [repositorio oficial de este módulo](https://github.com/geissler01/documentation-route-data).
+**Proyecto de ejemplo**: Puedes encontrar el código fuente y los datasets en el [repositorio oficial de este módulo](https://github.com/geissler01/pandas-docu-c7).
 
 ---
 
@@ -68,7 +69,7 @@ En esta sección se aplica lo aprendido sobre un dataset real para replicar un f
 - Limpieza profunda.
 - Análisis de tendencias.
 
-**Repo de Prácticas**: Accede al [repositorio de ejercicios prácticos](https://github.com/geissler01/documentation-route-data) para poner a prueba tus habilidades.
+**Repo de Prácticas**: Accede al [repositorio de ejercicios prácticos](https://github.com/geissler01/pandas-docu-c7) para poner a prueba tus habilidades.
 
 ---
 
@@ -89,15 +90,28 @@ El aprendizaje real viene de la experimentación y la resolución de problemas.
 
 El código está organizado por temas para facilitar la consulta rápida:
 
+```text
+pandas-doc-grupo/
+├── data/
+│   ├── csv/
+│   └── json/
+├── guia-pandas-docu/
+│   ├── _category_.json
+│   ├── intro.md
+│   ├── 01_instalar-pandas.md
+│   ├── 02_series-dataframe.md
+│   ├── 03_carga-datos.md
+│   ├── 04_exploracion_inicial.md
+│   ├── 05_seleccion_filtrado.md
+│   ├── 06_limpieza_datos.md
+│   ├── 07_transformaciones.md
+│   └── 08_agrupaciones_uniones.md
+└── guia-pandas-ejercicios-apoyo/
+    ├── 02_series-dataframe.py
+    ├── 03_carga-datos.py
+    ├── 04_exploracion_inicial.py
+    ├── 05_seleccion_filtrado.py
+    ├── 06_limpieza_datos.py
+    ├── 07_transformaciones.py
+    └── 08_agrupaciones_uniones.py
 ```
-docs/Pandas/
-├── 01_instalar-pandas.md
-├── 02_series-dataframe.md
-├── 03_carga-datos.md
-├── 04_exploracion_inicial.md
-└── 05_seleccion_filtrado.md
-```
-
-└── recursos/
-    ├── cheatsheet.md
-    └── errores_comunes.md
